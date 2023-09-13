@@ -109,7 +109,36 @@ export default function DashboardAppPage() {
               chartColors={[...Array(6)].map(() => theme.palette.text.secondary)}
             />
           </Grid>
+          <Grid item xs={12} md={6} lg={8}>
+            <AppNewsUpdate
+              title="News Update"
+              list={[...Array(5)].map((_, index) => ({
+                id: faker.datatype.uuid(),
+                title: faker.name.jobTitle(),
+                description: faker.name.jobTitle(),
+                image: `/assets/images/covers/cover_${index + 1}.jpg`,
+                postedAt: faker.date.recent(),
+              }))}
+            />
+            
+          </Grid>
 
+          <Grid item xs={12} md={6} lg={4}>
+            <AppOrderTimeline
+              title="Próximos eventos"
+              list={[...Array(3)].map((_, index) => ({
+                id: faker.datatype.uuid(),
+                title: [
+                  'Primeira copa de domingo',
+                  'Segunda copa de domingo',
+                  '...',
+
+                ][index],
+                type: `order${index + 1}`,
+                time: faker.date.past(),
+              }))}
+            />
+          </Grid>
 
         </Grid>
       </Container>

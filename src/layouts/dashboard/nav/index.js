@@ -59,19 +59,6 @@ export default function Nav({ openNav, onCloseNav }) {
 
       <Box sx={{ mb: 1, mx: 1 }}>
         <Link underline="none">
-          <StyledAccount>
-            <Avatar src={"/images/willPerfil.png"} alt="photoURL" />
-
-            <Box sx={{ ml: 2 }}>
-              <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
-                {mock.usuarioLogado.nome}
-              </Typography>
-
-              <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                {mock.usuarioLogado.funcao}
-              </Typography>
-            </Box>
-          </StyledAccount>
           <img src={mock.atletas[0].foto} alt='myplayer' style={{width: 250, height: 350}}/>
         </Link>
       </Box>
