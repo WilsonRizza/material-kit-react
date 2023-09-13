@@ -1,0 +1,102 @@
+{
+    "atletas": [
+        {
+            "id": 1,
+            "nome": "Will",
+            "foto": "/images/Will.png",
+            "atributos": [
+                {
+                    "id": 1,
+                    "nome": "Ritmo",
+                    "icon": "cil-bolt", 
+                    "Ritmo": [
+                        {
+                            "Aceleração": 72,
+                            "Sprint": 91
+                        }
+                    ],
+                    "valor": 78
+                },
+
+
+                {
+                    "id": 2,
+                    "nome": "Finalização",
+                    "icon": "cil-compress",
+                    "Finalização": [
+                        {
+                            "Finalização": 89,
+                            "Finalização de longe": 86,
+                            "Posicionamento do atacante": 84,
+                            "Força do chute": 85
+                        }
+                    ],
+                    "valor": 75
+                },
+                {
+                    "id": 3,
+                    "nome": "Passe",
+                    "icon": "cil-action-undo",
+                    "Passe": [
+                        {
+                            "Passe curto": 89,
+                            "Passe longo": 86,
+                            "Precisão do passe": 84,
+                            "Visão": 85,
+                            "Efeitos": 86
+                        }
+                    ],
+                    "valor": 80
+                },
+                {
+                    "id": 4,
+                    "nome": "Dribles",
+                    "icon": "cil-usb",
+                    "Passe": [
+                        {
+                            "Agilidade": 81,
+                            "Equilíbrio": 88,
+                            "Controle de bola": 89,
+                            "Reflexos": 85,
+                            "Driblar": 86
+                        }
+                    ],
+                    "valor": 80
+                },
+                {
+                    "id": 5,
+                    "nome": "Defesa",
+                    "icon": "cil-shield-alt",
+                    "Passe": [
+                        {
+                            "Interceptações": 79,
+                            "Posição defensiva": 83,
+                            "Conduzir": 81,
+                            "Pressão defensiva": 85
+                        }
+                    ],
+                    "valor": 85
+                },
+                {
+                    "id": 6,
+                    "nome": "Físico",
+                    "icon": "cil-weightlifitng",
+                    "Passe": [
+                        {
+                            "Agressividade": 79,
+                            "Força física": 83,
+                            "Resistência": 81
+                        }
+                    ],
+                    "valor":81
+                }
+            ]
+        }
+    ],
+    "usuarioLogado": {
+        "id": 1,
+        "nome": "Will",
+        "funcao": "Ala",
+        "fotoPerfil": "./images/Will.png"
+    }
+}
