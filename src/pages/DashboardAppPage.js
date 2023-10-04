@@ -38,56 +38,27 @@ export default function DashboardAppPage() {
       <Container maxWidth="xl">
         <div className ="card" style={{display: 'flex', backgroundColor:'black'}}/>
         <Grid container spacing={1}>
-          
-        
-          <Grid item xs={12} md={6} lg={8}>
-            <AppWebsiteVisits
-              title="Periodização anual"
-              
-              chartLabels={[
-                '01/09/2023',
-                '02/10/2023',
-                '03/11/2023',
-                '04/12/2023',
-                '05/01/2024',
-                '06/02/2024',
-                '07/03/2024',
-                '08/04/2024',
-                '09/05/2024',
-                '10/06/2024',
-                '11/07/2024',
-              ]}
+
+        <Grid item xs={12} md={6} lg={4}>
+            <AppCurrentSubject
+              title="Valências físicas"
+              chartLabels={['Ritmo', 'Finalização', 'Passe', 'Dribles', 'Defesa', 'Físico']}
               chartData={[
-                {
-                  name: 'Semanas',
-                  type: 'column',
-                  fill: 'solid',
-                  data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
-                },
-                {
-                  name: 'Intensidade',
-                  type: 'area',
-                  fill: 'gradient',
-                  data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
-                },
-                {
-                  name: 'Volume',
-                  type: 'line',
-                  fill: 'solid',
-                  data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
-                },
+                { name: 'Potencial máximo', data: [100, 100, 100, 100, 100, 100] },
+                { name: 'Condicionamento atual', data: [78, 75, 80, 80, 85, 81] },
               ]}
+              chartColors={[...Array(6)].map(() => theme.palette.text.secondary)}
             />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
               title="Maior volume de treino até agora"
               chartData={[
-                { label: 'Potência', value: 4344 },
-                { label: 'Agilidade', value: 5435 },
-                { label: 'Velocidade máxima', value: 1443 },
-                { label: 'Resistência', value: 4443 },
+                { label: 'Força', value: 4 },
+                { label: 'Fortalecimento', value: 2 },
+                { label: 'Corrida', value: 2 },
+                { label: 'Específicos de futsal', value: 3 },
               ]}
               chartColors={[
                 theme.palette.primary.main,
@@ -98,47 +69,48 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={4}>
-            <AppCurrentSubject
-              title="Valências físicas"
-              chartLabels={['Ritmo', 'Finalização', 'Passe', 'Dribles', 'Defesa', 'Físico']}
-              chartData={[
-                { name: 'Potencial máximo', data: [100, 100, 100, 100, 100, 100] },
-                { name: 'Condicionamento atual', data: [80, 86, 88, 79, 52, 72] },
-              ]}
-              chartColors={[...Array(6)].map(() => theme.palette.text.secondary)}
-            />
-          </Grid>
+          
+          
           <Grid item xs={12} md={6} lg={8}>
-            <AppNewsUpdate
-              title="News Update"
-              list={[...Array(5)].map((_, index) => ({
-                id: faker.datatype.uuid(),
-                title: faker.name.jobTitle(),
-                description: faker.name.jobTitle(),
-                image: `/assets/images/covers/cover_${index + 1}.jpg`,
-                postedAt: faker.date.recent(),
-              }))}
+            <AppWebsiteVisits
+              title="Periodização anual"
+              
+              chartLabels={[
+                '09/01/2023',
+                '10/01/2023',
+                '11/01/2023',
+                '12/01/2023',
+                '01/01/2024',
+                '02/01/2024',
+                '03/01/2024',
+                '04/01/2024',
+                '05/01/2024',
+                '06/01/2024',
+                '07/01/2024',
+              ]}
+              chartData={[
+                {
+                  name: 'Meses',
+                  type: 'column',
+                  fill: 'solid',
+                  data: [40, 60, 80, 40, 60, 80, 50, 70, 90, 60, 70],
+                },
+                {
+                  name: 'Intensidade',
+                  type: 'area',
+                  fill: 'gradient',
+                  data: [50, 60, 70, 60, 70, 80, 70, 80, 90, 75, 80],
+                },
+                {
+                  name: 'Volume',
+                  type: 'line',
+                  fill: 'solid',
+                  data: [70, 80, 90, 70, 80, 90, 75, 85, 95, 75, 85],
+                },
+              ]}
             />
-            
           </Grid>
 
-          <Grid item xs={12} md={6} lg={4}>
-            <AppOrderTimeline
-              title="Próximos eventos"
-              list={[...Array(3)].map((_, index) => ({
-                id: faker.datatype.uuid(),
-                title: [
-                  'Primeira copa de domingo',
-                  'Segunda copa de domingo',
-                  '...',
-
-                ][index],
-                type: `order${index + 1}`,
-                time: faker.date.past(),
-              }))}
-            />
-          </Grid>
 
         </Grid>
       </Container>

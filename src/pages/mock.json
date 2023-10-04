@@ -3,6 +3,8 @@
         {
             "id": 1,
             "nome": "Will",
+            "email": "wilsonarizza@gmail.com",
+            "icon": "/images/WillPerfil.png",
             "foto": "/images/Will.png",
             "atributos": [
                 {

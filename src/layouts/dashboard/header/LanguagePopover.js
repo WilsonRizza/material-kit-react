@@ -9,7 +9,7 @@ const LANGS = [
   {
     value: 'Br',
     label: 'Brasileiro',
-    icon: '/assets/icons/ic_flag_en.svg',
+    icon: '/images/Brazil.png',
   },
 ];
 
